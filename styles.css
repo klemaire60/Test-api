@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #555;
+  height: 60px;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-left: 210px;
+  margin-right: 220px;
+}
+
+.top-bar input[type="text"] {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  width: 150px;
+  position: absolute;
+  left: calc(200px + 20px + 100px);
+}
+
+.top-bar input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  padding: 38px 10px 10px 10px;
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #555;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 60px;
+  padding: 10px;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.compartment {
+  padding: 20px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  height: 90%; /* Occuper toute la hauteur disponible */
+  position: relative;
+}
+
+.compartment-left {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.compartment-top {
+  height: 67%; /* Hauteur fixe pour le compartiment du haut à gauche */
+}
+
+.compartment-bottom {
+  height: 33%; /* Occuper le reste de l'espace disponible */
+}
+
+.compartment-right {
+  flex: 1 1 60%;
+}
+
+.compartment-top h1 {
+  text-align: center;
+  text-decoration: solid;
+}
+
+.submit-button {
+  position: absolute; 
+  bottom: 5px;
+  right: 5px;
+  padding: 0 0;
+  background-color: #2fff00;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 40px;
+  width: 125px;
+  font: 1.1em sans-serif;
+}
